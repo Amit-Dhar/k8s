@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: backend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: springboot-demo1
+        image: amit/springboot-demo1:v1
+        imagePullPolicy: Never
+        env:
+            - name: MYSQL_HOST
+              value: mysql-db
+        ports:
+        - containerPort: 8080
