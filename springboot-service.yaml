@@ -5,11 +5,11 @@ metadata:
   labels:                     # Labels that will be applied to this resource
     app: backend-service
 spec:                         
-  type: NodePort              # The service will be exposed by opening a Port on each node and proxying it. 
+  #type: NodePort              # The service will be exposed by opening a Port on each node and proxying it. 
   selector:
     app: backend  # The service exposes Pods with label `app=backend`
   ports:                      # Forward incoming connections on port 8080 to the target port 8080
   - name: http
     port: 8080
     targetPort: 8080
-    nodePort: 30080
+    #nodePort: 30080

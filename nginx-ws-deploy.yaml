@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx-ws
-        image: amit/nginx-ws:v1
+        image: amdh/nginx-ws:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 80
